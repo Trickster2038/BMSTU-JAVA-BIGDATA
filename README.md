@@ -1,11 +1,11 @@
 # BMSTU-JAVA-BIGDATA
 
-Repository for practical tasks - BMSTU, master ICS6, 2 semester program - course BigData
+Repository for practical tasks - BMSTU, master ICS6, 2 semester program - BigData languages
 
 # Личные данные
 
 ```
-Астахов Сергей Викторович ИУ6-12М - вариант 1 - задачи 1-2
+Астахов Сергей Викторович ИУ6-22М - вариант 1 - задачи 1-2
 ```
 
 # Наименование заданий
