@@ -3,9 +3,10 @@ package org.example;
 import java.util.*;
 import java.util.stream.Collectors;
 
-// Ввести с консоли n целых чисел и поместить их в массив. На консоль вывести:
-// 1. Четные и нечетные числа
-
+/*
+    Ввести с консоли n целых чисел и поместить их в массив. На консоль вывести:
+    1. Четные и нечетные числа
+*/
 
 public class Main {
     public static void main(String[] args) {

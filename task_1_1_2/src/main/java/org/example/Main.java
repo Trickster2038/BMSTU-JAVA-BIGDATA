@@ -1,5 +1,10 @@
 package org.example;
 
+/*
+    2. Создать приложение, которое отображает в окне консоли 
+    аргументы командной строки метода main() в обратном порядке. 
+*/
+
 public class Main {
     public static void main(String[] args) {
 
