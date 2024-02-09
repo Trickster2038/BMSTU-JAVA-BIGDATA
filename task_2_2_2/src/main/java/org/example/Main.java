@@ -10,8 +10,8 @@ import java.util.Scanner;
     Задать значения элементов матрицы в интервале значений от -n до n
     с помощью датчика случайных чисел.
 
-    1. Упорядочить строки (столбцы) матрицы в порядке возрастания
-    значений элементов k-го столбца (строки).
+    2. Выполнить циклический сдвиг заданной матрицы на k
+    позиций вправо (влево, вверх, вниз).
 */
 
 public class Main {
@@ -38,17 +38,21 @@ public class Main {
             System.out.println();
         }
 
-        System.out.println("Enter k (num of sort-by column):");
-        int k = sc.nextInt() - 1;
+        System.out.println("Enter k (shift positions):");
+        int k = sc.nextInt();
 
-        Arrays.sort(matrix, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] row1, int[] row2) {
-                return Integer.compare(row1[k], row2[k]); // ascending
+        for (int[] row : matrix) {
+            int len = row.length;
+            int[] temp = new int[len];
+
+            for (int j = 0; j < len; j++) {
+                temp[(j + k) % len] = row[j];
             }
-        });
 
-        System.out.println("Sorted matrix:");
+            System.arraycopy(temp, 0, row, 0, len);
+        }
+
+        System.out.println("Shifted matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.printf("%3d ", matrix[i][j]);
