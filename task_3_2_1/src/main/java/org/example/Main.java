@@ -28,11 +28,11 @@ public class Main {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         StudentCollection st_collection = new StudentCollection(new Student[]{
-                new Student("Sergey", "Astakhov", "Victorovich", dateFormat.parse("2001-01-01"), "Balashiha" , "+7-900-000-00-00", "ICS", 5, 2),
-                new Student("Mark", "Khabarov", "X.", dateFormat.parse("2001-05-01"), "Fryazino" , "+7-900-000-00-01", "ICS", 5, 2),
-                new Student("Nina", "Gendina", "X.", dateFormat.parse("2000-07-01"), "Moscow" , "+7-900-000-00-02", "ICS", 5, 2),
-                new Student("Ivan", "Ivanov", "X.", dateFormat.parse("1999-05-01"), "Moscow" , "+7-900-000-00-03", "SM", 3, 1),
-                new Student("Boris", "Ivanov", "X.", dateFormat.parse("2001-05-02"), "Moscow" , "+7-900-000-00-04", "SM", 3, 1)
+                new Student(1,"Sergey", "Astakhov", "Victorovich", dateFormat.parse("2001-01-01"), "Balashiha" , "+7-900-000-00-00", "ICS", 5, 2),
+                new Student(2,"Mark", "Khabarov", "X.", dateFormat.parse("2001-05-01"), "Fryazino" , "+7-900-000-00-01", "ICS", 5, 2),
+                new Student(3,"Nina", "Gendina", "X.", dateFormat.parse("2000-07-01"), "Moscow" , "+7-900-000-00-02", "ICS", 5, 2),
+                new Student(4,"Ivan", "Ivanov", "X.", dateFormat.parse("1999-05-01"), "Moscow" , "+7-900-000-00-03", "SM", 3, 1),
+                new Student(5,"Boris", "Ivanov", "X.", dateFormat.parse("2001-05-02"), "Moscow" , "+7-900-000-00-04", "SM", 3, 1)
         });
 
         System.out.println("=== Filter by faculty (SM) ===");
@@ -147,6 +147,8 @@ class StudentCollection {
 }
 
 class Student {
+
+    private int id;
     private String name;
     private String surname;
     private String thirdname;
@@ -157,7 +159,8 @@ class Student {
     private int course;
     private int group;
 
-    public Student(String name, String surname, String thirdname, Date birthdate, String address, String phone, String faculty, int course, int group) {
+    public Student(int id, String name, String surname, String thirdname, Date birthdate, String address, String phone, String faculty, int course, int group) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.thirdname = thirdname;
@@ -171,9 +174,13 @@ class Student {
 
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        return String.format("Student: %s %s %s (%s course: %d groud: %d)\n", name, surname, thirdname, faculty, course, group) +
-                String.format("Birthdate: %s Phone: %s\n", sdf.format(birthdate), phone) +
-                String.format("Address: %s\n", address);
+        return String.format("Student(id=%d): %s %s %s (%s course: %d groud: %d)\n", this.id, this.name, this.surname, this.thirdname, this.faculty, this.course, this.group) +
+                String.format("Birthdate: %s Phone: %s\n", sdf.format(this.birthdate), this.phone) +
+                String.format("Address: %s\n", this.address);
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -210,6 +217,10 @@ class Student {
 
     public int getGroup() {
         return group;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setName(String name) {
