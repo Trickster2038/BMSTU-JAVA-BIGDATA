@@ -1,7 +1,6 @@
 Output example
 
 ```
-C:\Users\sergey.astakhov\.jdks\openjdk-21\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.2\lib\idea_rt.jar=57810:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.2\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\sergey.astakhov\Desktop\BMSTU-JAVA-BIGDATA\task_3_3_1\target\classes org.example.Main
 === Text file work example ===
 
 
