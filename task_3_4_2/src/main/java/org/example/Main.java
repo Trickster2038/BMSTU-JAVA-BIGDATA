@@ -7,25 +7,91 @@ package org.example;
        + сделать платеж на другой Счет,
        + заблокировать КК
        + и аннулировать Счет.
-       Администратор может заблокировать КК за превышение кредита.
+       + Администратор может заблокировать КК за превышение кредита.
  */
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        System.out.println("Hello world!");
+        System.out.println("=== Bank class work example ===\n\n");
+
+        Person clientSergey = new Person("Sergey");
+        Person clientMax = new Person("Max");
+        Person clientDmitry = new Person("Dmitry");
+
+        Person adminAlex = new Person("Alex");
+
+        Bank bank = new Bank();
+
+        bank.registerClient(clientSergey, -5000, 10000);
+        bank.registerClient(clientMax, -5000, 10000);
+        bank.registerClient(clientDmitry, -5000, 10000);
+
+        bank.hireAdmin(adminAlex);
+
+        bank.purchaseByCard(clientSergey, 100, bank.getAccountIdByPerson(clientMax));            // card -> account; Sergey -100; 10000; Max 0; 10100
+        bank.purchaseByCard(clientDmitry, 15000, bank.getAccountIdByPerson(clientMax));          // card -> account; Dmitry -15000; 10000; Max 0; 25100
+        bank.transferFromAccount(clientDmitry, 100, bank.getAccountIdByPerson(clientMax));       // account -> account; Dmitry -15100; 10000; Max 0; 25200
+        bank.blockCardById(clientSergey, bank.getCardIdByPerson(clientSergey));                         // card.isBlocked
+        bank.closeAccount(clientDmitry);                                                                // card -> account; Dmitry -5100; null
+        bank.blockCardById(adminAlex, bank.getCardIdByPerson(clientDmitry));                            // card.isBlocked
+
+        System.out.println("=== System state after all operations ===\n\n");
+
+        System.out.println(bank);
     }
 }
 
 class Bank {
 
-    public void registerClient(Client client, Integer cardLimit, Integer accountBalance) throws Exception {
+    private  HashMap<Person, Integer> cardsIdByClient;
+    private  HashMap<Person, Integer> accountsIdByClient;
+    private  HashMap<Integer, Card> cardsById;
+    private  HashMap<Integer, Account> accountsById;
+    private HashSet<Person> admins;
+    private HashSet<Person> clients;
+
+    public Bank() {
+        cardsIdByClient = new HashMap<>();
+        accountsIdByClient = new HashMap<>();
+        cardsById = new HashMap<>();
+        accountsById = new HashMap<>();
+        admins = new HashSet<>();
+        clients = new HashSet<>();
+    }
+
+    public String toString() {
+        String result = "=== Clients ===\n";
+        for(Person client : clients) {
+            result = String.format("%s %n%n %s", result, client);
+            if(cardsIdByClient.containsKey(client)) {
+                Card card = cardsById.get(cardsIdByClient.get(client));
+                result = String.format("%s %n %s", result, card);
+            }
+            if(accountsIdByClient.containsKey(client)) {
+                Account account = accountsById.get(accountsIdByClient.get(client));
+                result = String.format("%s %n %s", result, account);
+            }
+        }
+        result += "\n\n=== Admins ===\n";
+        for(Person admin : admins) {
+            result = String.format("%s %n %s", result, admin);
+        }
+        return result;
+    }
+
+    public void hireAdmin(Person admin) {
+        admins.add(admin);
+    }
+
+    public void registerClient(Person client, Integer cardLimit, Integer accountBalance) throws Exception {
         Card card = new Card(cardLimit);
         Account account = new Account(accountBalance);
 
-        if(cardsIdByClient.containsKey(client) || accountsIdByClient.containsKey(client)) {
+        if(clients.contains(client)) {
             throw new Exception("Client is already registered!");
         }
 
@@ -33,9 +99,11 @@ class Bank {
         accountsIdByClient.put(client, account.getId());
         cardsById.put(card.getId(), card);
         accountsById.put(account.getId(), account);
+
+        clients.add(client);
     }
 
-    public void purchaseByCard(Client client, Integer amount, Integer targetAccountId) throws Exception {
+    public void purchaseByCard(Person client, Integer amount, Integer targetAccountId) throws Exception {
         if(!cardsIdByClient.containsKey(client)) {
             throw new Exception("Client has no card!");
         }
@@ -57,7 +125,7 @@ class Bank {
         accountsById.put(targetAccountId, targetAccount);
     }
 
-    public void transferFromAccount(Client client, Integer amount, Integer targetAccountId) throws Exception {
+    public void transferFromAccount(Person client, Integer amount, Integer targetAccountId) throws Exception {
         if(!accountsIdByClient.containsKey(client)) {
             throw new Exception("Client has no account!");
         }
@@ -79,27 +147,37 @@ class Bank {
         accountsById.put(targetAccountId, targetAccount);
     }
 
-    public Integer getCardId(Client client) throws Exception {
+    public Integer getCardIdByPerson(Person client) throws Exception {
         if(!cardsIdByClient.containsKey(client)){
             throw new Exception("Client has no card!");
         }
         return cardsIdByClient.get(client);
     }
 
-    public void blockCardById(Client client, Integer targetCardId) throws Exception {
-        if(!cardsIdByClient.containsKey(client)) {
-            throw new Exception("Client has no card!");
+    public Integer getAccountIdByPerson(Person client) throws Exception {
+        if(!accountsIdByClient.containsKey(client)){
+            throw new Exception("Client has no account!");
         }
-        Integer cardId = cardsIdByClient.get(client);
-        if(!cardId.equals(targetCardId)) {
-            throw new Exception("Client is not owner of card!");
-        }
-        Card card = cardsById.get(cardId);
-        card.block();
-        cardsById.put(cardId, card);
+        return accountsIdByClient.get(client);
     }
 
-    public void closeAccount(Client client) throws Exception {
+    public void blockCardById(Person person, Integer targetCardId) throws Exception {
+        if(!cardsIdByClient.containsKey(person) && !admins.contains(person)) {
+            throw new Exception("Client has no card!");
+        }
+        Integer personCardId = cardsIdByClient.getOrDefault(person, -1);
+        if(!personCardId.equals(targetCardId) && !admins.contains(person)) {
+            throw new Exception("Client is not owner of card and is not admin!");
+        }
+        Card card = cardsById.get(targetCardId);
+        if(!personCardId.equals(targetCardId) && admins.contains(person) && !card.limitReached()) {
+            throw new Exception("Card limit is not reached!");
+        }
+        card.block();
+        cardsById.put(targetCardId, card);
+    }
+
+    public void closeAccount(Person client) throws Exception {
         if(!accountsIdByClient.containsKey(client)) {
             throw new Exception("Client has no account!");
         }
@@ -116,12 +194,8 @@ class Bank {
 
         cardsById.put(cardId, card);
         accountsById.remove(accountId);
+        accountsIdByClient.remove(client);
     }
-
-    private  HashMap<Client, Integer> cardsIdByClient;
-    private  HashMap<Client, Integer> accountsIdByClient;
-    private  HashMap<Integer, Card> cardsById;
-    private  HashMap<Integer, Account> accountsById;
 
     private class Card {
         private static Integer cardIdCounter = 1000;
@@ -135,6 +209,14 @@ class Bank {
             this.limit = limit;
             this.isBlocked = false;
             cardIdCounter++;
+        }
+
+        public String toString() {
+            return String.format("<Card> id: %d balance: %d limit: %d isBlocked: %b", id, balance, limit, isBlocked);
+        }
+
+        public Boolean limitReached() {
+            return balance < limit;
         }
 
         public void block(){
@@ -168,6 +250,10 @@ class Bank {
             accountIdCounter++;
         }
 
+        public String toString() {
+            return String.format("<Account> id: %d balance: %d", id, balance);
+        }
+
         public void changeBalance(Integer amount){
             this.balance += amount;
         }
@@ -181,48 +267,20 @@ class Bank {
         }
     }
 
-    public Bank() {
-        cardsIdByClient = new HashMap<>();
-        accountsIdByClient = new HashMap<>();
-        cardsById = new HashMap<>();
-        accountsById = new HashMap<>();
-    }
-
-
 }
 
-class Admin extends NamedEntity {
-    public Admin(String name) {
-        super(name);
-    }
-
-    public String toString() {
-        return String.format("<Admin> %s", super.toString());
-    }
-}
-
-class Client extends NamedEntity {
-    public Client(String name) {
-        super(name);
-    }
-
-    public String toString() {
-        return String.format("<Client> %s", super.toString());
-    }
-}
-
-class NamedEntity {
+class Person {
     private static Integer idCounter = 0;
     private String name;
     private Integer id;
 
-    public NamedEntity(String name) {
+    public Person(String name) {
         this.name = name;
         this.id = idCounter;
         idCounter++;
     }
 
     public String toString() {
-        return String.format("id: %s name: %s", this.id, this.name);
+        return String.format("<Person> id: %s name: %s", this.id, this.name);
     }
 }
