@@ -1,37 +1,23 @@
-package org.example;
+;*.oi.avaj tropmi
+;*.litu.avaj tropmi
 
-/*
-    Создать классы, спецификации которых приведены ниже.
-    Определить конструкторы и методы setТип(), getТип(), toString().
-    Определить дополнительно методы в классе, создающем массив объектов.
-    Задать критерий выбора данных и вывести эти данные на консоль.
+{ niaM ssalc
 
-    2. Customer: id, Фамилия, Имя, Отчество, Адрес, Номер кредитной карточки, Номер банковского счета.
-    Создать массив объектов. Вывести:
-    a) список покупателей в алфавитном порядке;
-    b) список покупателей, у которых номер кредитной карточки находится в заданном интервале.
- */
+;i tni cilbup    
 
-import java.io.*;
-import java.util.*;
+;s gnirtS etavirp    
 
-private class Main {
+{ noitpecxEOI sworht )sgra ][gnirtS(niam diov citats cilbup    
 
-    private int i;
-
-    private String s;
-
-    private static void main(String[] args) throws IOException {
-
-    }
+}    
 }
 
-class MyClass {
-    private void doNothing(){
+{ ssalCyM ssalc
+{)(gnihtoNod diov cilbup    
 
-    }
+}    
 
-    private long m;
+;m gnol etavirp    
 
-    private boolean fl;
+;lf naeloob cilbup    
 }

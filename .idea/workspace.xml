@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b30a6e6-d8e6-4868-9bf1-3aa0cf037c4c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task_5_4_1/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_3_1/block.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_3_2/block.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task_5_4_2/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BMSTU-JAVA-BIGDATA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BMSTU-JAVA-BIGDATA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/block.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5_3_2/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/task_5_3_2/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.java" beforeDir="false" afterPath="$PROJECT_DIR$/example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/out_example.java" beforeDir="false" afterPath="$PROJECT_DIR$/output/out_example.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,23 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/gwynbleidd/Рабочий стол/BMSTU-JAVA-BIGDATA&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/gwynbleidd/Рабочий стол/BMSTU-JAVA-BIGDATA/task_5_4_1"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/task_5_4_1" />
+      <recent name="$PROJECT_DIR$/task_5_3_1" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\sergey.astakhov\Desktop\BMSTU-JAVA-BIGDATA" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/task_5_4_2" />
+      <recent name="$PROJECT_DIR$/task_5_3_2" />
     </key>
   </component>
   <component name="RunManager">
