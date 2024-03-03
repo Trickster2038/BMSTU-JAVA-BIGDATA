@@ -20,34 +20,32 @@ public class Main {
 
         System.out.println("=== File class work example ===\n\n");
 
-        System.out.println("Enter input file name (block.txt): ");
+        System.out.println("Enter input file name (example.java): ");
 
         Scanner scanner = new Scanner(System.in);
 
         String in_filename = scanner.nextLine();
 
         if(Objects.equals(in_filename, "")) {
-            in_filename = "block.txt";
-            System.out.println("using block.txt");
+            in_filename = "example.java";
+            System.out.println("using example.java");
         }
 
-        System.out.println("Enter output file name (out.txt): ");
+        System.out.println("Enter output file name (out_example.java): ");
 
         String out_filename = scanner.nextLine();
 
         if(Objects.equals(out_filename, "")) {
-            out_filename = "out.txt";
-            System.out.println("using out.txt");
+            out_filename = "out_example.java";
+            System.out.println("using out_example.java");
         }
 
+        out_filename = "./output/" + out_filename;
+
         File out_file = new File(out_filename);
+        File dir = new File("./output");
+        dir.mkdirs();
         out_file.createNewFile();
-
-        System.out.println("Enter substring to replace (from):");
-        String substring_from = scanner.nextLine();
-
-        System.out.println("Enter substring to replace (to):");
-        String substring_to = scanner.nextLine();
 
         BufferedReader reader = new BufferedReader(new FileReader(in_filename));
         BufferedWriter writer = new BufferedWriter(new FileWriter(out_filename));
@@ -58,8 +56,9 @@ public class Main {
 
         while ((currentLine = reader.readLine()) != null) {
             System.out.printf("%s\n", currentLine);
-            System.out.printf("> %s\n", currentLine.replace(substring_from, substring_to));
-            writer.write(currentLine.replace(substring_from, substring_to));
+            String new_str = currentLine.replace("public ", "private ").replace("public\t", "private\t");
+            System.out.printf("> %s\n", new_str);
+            writer.write(new_str + System.lineSeparator());
         }
 
         writer.close();
