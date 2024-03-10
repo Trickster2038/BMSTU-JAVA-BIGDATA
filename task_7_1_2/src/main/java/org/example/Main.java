@@ -12,7 +12,7 @@ public class Main {
 
         System.out.println("=== Regex work example ===\n\n");
 
-        String inputString = "Hello World Java Example a b";
+        String inputString = "Привет, Джава!";
 
         Pattern pattern = Pattern.compile("."); // "\\p{L}"
 
