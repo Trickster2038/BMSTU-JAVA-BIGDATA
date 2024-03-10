@@ -14,38 +14,24 @@ public class Main {
 
         String inputString = "Hello, Java! Java Java abc cba cba hello hElLo App AAAAA. Hello. Bbnn? Java. Mmmm!";
 
-        String inputChar = "a";
-
-        Pattern pattern = Pattern.compile("(^|\\b)\\w+[ .!?,]", Pattern.CASE_INSENSITIVE);
-
-        Matcher matcher = pattern.matcher(inputString);
+        String[] seacrh_words = new String[]{"java", "hello", "abc"};
 
         System.out.println("Input String: " + inputString);
 
-        System.out.println("Input Char: " + inputChar);
-
         ArrayList<CountedWord> words = new ArrayList<CountedWord>();
 
-        while (matcher.find()) {
-            String word = inputString.substring(matcher.start(), matcher.end() - 1);
-            Pattern pattern2 = Pattern.compile(inputChar, Pattern.CASE_INSENSITIVE);
-
-            Matcher matcher2 = pattern2.matcher(word);
-            words.add(new CountedWord(word, matcher2.results().count()));
+        for (String word : seacrh_words) {
+            Pattern pattern = Pattern.compile("(^|\\b)" + word + "[ .!?,]", Pattern.CASE_INSENSITIVE);
+            Matcher matcher = pattern.matcher(inputString);
+            words.add(new CountedWord(word, matcher.results().count()));
         }
 
-        words.sort(Main::compareWords);
+        words.sort(CountedWord::compareWordsDesc);
 
         for(CountedWord word : words){
             System.out.println(word);
         }
-    }
 
-    private static int compareWords(CountedWord cw1, CountedWord cw2){
-        if (cw1.cnt != cw2.cnt) {
-            return (int) (cw1.cnt - cw2.cnt);
-        }
-        return cw1.word.compareTo(cw2.word);
     }
 }
 
@@ -60,5 +46,9 @@ class CountedWord {
 
     public String toString(){
         return String.format("<word> %s [%d]", word, cnt);
+    }
+
+    public static int compareWordsDesc(CountedWord cw1, CountedWord cw2){
+        return (int) (- cw1.cnt + cw2.cnt);
     }
 }
