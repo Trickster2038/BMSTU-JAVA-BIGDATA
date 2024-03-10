@@ -1,8 +1,8 @@
 package org.example;
 
 import java.io.*;
-import java.util.*;
-import java.util.regex.Matcher;
+        import java.util.*;
+        import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -32,10 +32,10 @@ public class Main {
         for(Integer i=0; i < sentences.size(); i++){
             int cnt = 0;
             for (Integer j=0; j < sentences.size(); j++) {
-                 Pattern pattern2 = Pattern.compile("(^|\\b)\\w+[ .!?,]", Pattern.CASE_INSENSITIVE);
-                 Matcher matcher2 = pattern2.matcher(sentences.get(i));
+                Pattern pattern2 = Pattern.compile("(^|\\b)\\w+[ .!?,]", Pattern.CASE_INSENSITIVE);
+                Matcher matcher2 = pattern2.matcher(sentences.get(i));
 //                 System.out.println(">>> " + sentences.get(i));
-                 while (matcher2.find()) {
+                while (matcher2.find()) {
                     String sub = sentences.get(i).substring(matcher2.start(), matcher2.end() - 1);
 //                    System.out.println(i.toString() + " - " + sub);
                     Pattern pattern3 = Pattern.compile("(^|\\b)" + sub + "[ .!?,]", Pattern.CASE_INSENSITIVE);
