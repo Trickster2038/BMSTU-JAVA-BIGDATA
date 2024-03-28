@@ -1,17 +1,14 @@
 package net.alchim31.maven;
 
 import org.apache.spark.sql.*;
-import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
+
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Spark init");
-
 
         // Create SparkSession
         SparkSession spark = SparkSession.builder()
@@ -19,38 +16,61 @@ public class Main {
                 .master("local[*]")
                 .getOrCreate();
 
+        spark.sparkContext().setLogLevel("ERROR");
+
         System.out.println("Spark post-init");
+
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
         // Create Java SparkContext
         JavaSparkContext jsc = new JavaSparkContext(
                 spark.sparkContext());
 
-        // jsc.setLogLevel("OFF");
+        Dataset<Row> dataset = spark.read().format("csv")
+                .option("header", "true")
+                .load(System.getProperty("user.dir") + "\\transaction_dataset.csv");
 
-        // Create RDD
-        List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
-        JavaRDD<Integer> rdd = jsc.parallelize(data);
+        dataset.createOrReplaceTempView("tx_ether");
 
-        // Print rdd object
-        System.out.println(rdd);
+        System.out.println("\n\n\n1. sample");
 
-        // Print rdd contents to console
-        rdd.collect().forEach(System.out::println);
+        spark.sql("select * from tx_ether").show();
 
-        // Another RDD example
-        List<String[]> dataList = new ArrayList<>();
-        dataList.add(new String[] { "California", "CA" });
-        dataList.add(new String[] { "New York", "NY" });
+        System.out.println("\n\n\n2. created contracts top");
 
-        // Create RDD
-        JavaRDD<Row> rdd2 = jsc.parallelize(dataList)
-                .map((String[] row) -> RowFactory.create(row));
+        spark.sql("select Address, `Number of Created Contracts`, FLAG from tx_ether order by cast(`Number of Created Contracts` as int) desc").show();
 
-        // Print rdd object
-        System.out.println(rdd2);
+        System.out.println("\n\n\n3. received-rate top");
 
-        // Print RDD contents to console
-        rdd2.collect().forEach(System.out::println);
+        spark.sql("select Address, `Avg min between received tnx`, FLAG from tx_ether where `Avg min between received tnx` > 0.00000001 order by `Avg min between received tnx` asc").show();
+
+        System.out.println("\n\n\n4. rate for groups");
+
+        spark.sql("select FLAG, avg(`Avg min between sent tnx`) sent_rate, avg(`Avg min between received tnx`) recieved_rate from tx_ether group by FLAG").show();
+
+        System.out.println("\n\n\n5. most fraud-profitable tokens");
+
+        spark.sql("select ` ERC20 most sent token type`, ` ERC20_most_rec_token_type`, ` ERC20 max val rec` from tx_ether where FLAG = 1 order by cast(` ERC20 max val rec` as int) desc").show();
+
+        System.out.println("\n\n\n6. most honest-profitable tokens");
+
+        spark.sql("select ` ERC20 most sent token type`, ` ERC20_most_rec_token_type`, ` ERC20 max val rec` from tx_ether where FLAG = 0 order by cast(` ERC20 max val rec` as int) desc").show();
+
+        System.out.println("\n\n\n7. most fraud-rated tokens");
+
+        spark.sql("select ` ERC20 most sent token type`, ` ERC20_most_rec_token_type`, count(1) from tx_ether where FLAG = 1 group by ` ERC20 most sent token type`, ` ERC20_most_rec_token_type` order by count(1) desc").show();
+
+        System.out.println("\n\n\n8. most honest-rated tokens");
+
+        spark.sql("select ` ERC20 most sent token type`, ` ERC20_most_rec_token_type`, count(1) from tx_ether where FLAG = 0 group by ` ERC20 most sent token type`, ` ERC20_most_rec_token_type` order by count(1) desc").show();
+
+        System.out.println("\n\n\n9. avg val received top");
+
+        spark.sql("select Address, `avg val received`, FLAG from tx_ether order by cast(`avg val received` as numeric(23,5)) desc").show();
+
+        System.out.println("\n\n\n10. avg val received bottom");
+
+        spark.sql("select Address, `avg val received`, FLAG from tx_ether where `avg val received` > 0.00001 order by cast(`avg val received` as numeric(23,5)) asc").show();
 
         // Stop the SparkSession and JavaSparkContext
         spark.stop();
