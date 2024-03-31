@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="conf1" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-    <module name="task_3_2_2" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>

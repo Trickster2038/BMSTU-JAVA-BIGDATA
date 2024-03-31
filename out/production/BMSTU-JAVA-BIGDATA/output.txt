@@ -1,0 +1,332 @@
+C:\Users\sergey.astakhov\.jdks\openjdk-21\bin\java.exe --add-exports java.base/sun.nio.ch=ALL-UNNAMED "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.2\lib\idea_rt.jar=59034:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.2\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\sergey.astakhov\Desktop\BMSTU-JAVA-BIGDATA\task10_x\target\classes;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-core_2.12\3.5.0\spark-core_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\avro\avro\1.11.2\avro-1.11.2.jar;C:\Users\sergey.astakhov\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.2\jackson-core-2.14.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\avro\avro-mapred\1.11.2\avro-mapred-1.11.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\avro\avro-ipc\1.11.2\avro-ipc-1.11.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\tukaani\xz\1.9\xz-1.9.jar;C:\Users\sergey.astakhov\.m2\repository\com\twitter\chill_2.12\0.10.0\chill_2.12-0.10.0.jar;C:\Users\sergey.astakhov\.m2\repository\com\esotericsoftware\kryo-shaded\4.0.2\kryo-shaded-4.0.2.jar;C:\Users\sergey.astakhov\.m2\repository\com\esotericsoftware\minlog\1.3.0\minlog-1.3.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;C:\Users\sergey.astakhov\.m2\repository\com\twitter\chill-java\0.10.0\chill-java-0.10.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\xbean\xbean-asm9-shaded\4.23\xbean-asm9-shaded-4.23.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\hadoop\hadoop-client-api\3.3.4\hadoop-client-api-3.3.4.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\hadoop\hadoop-client-runtime\3.3.4\hadoop-client-runtime-3.3.4.jar;C:\Users\sergey.astakhov\.m2\repository\commons-logging\commons-logging\1.1.3\commons-logging-1.1.3.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-launcher_2.12\3.5.0\spark-launcher_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-kvstore_2.12\3.5.0\spark-kvstore_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\fusesource\leveldbjni\leveldbjni-all\1.8\leveldbjni-all-1.8.jar;C:\Users\sergey.astakhov\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.2\jackson-annotations-2.15.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-network-common_2.12\3.5.0\spark-network-common_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\com\google\crypto\tink\tink\1.9.0\tink-1.9.0.jar;C:\Users\sergey.astakhov\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\sergey.astakhov\.m2\repository\com\google\protobuf\protobuf-java\3.19.6\protobuf-java-3.19.6.jar;C:\Users\sergey.astakhov\.m2\repository\joda-time\joda-time\2.12.5\joda-time-2.12.5.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-network-shuffle_2.12\3.5.0\spark-network-shuffle_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-unsafe_2.12\3.5.0\spark-unsafe_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-common-utils_2.12\3.5.0\spark-common-utils_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\slf4j\jul-to-slf4j\2.0.7\jul-to-slf4j-2.0.7.jar;C:\Users\sergey.astakhov\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.7\jcl-over-slf4j-2.0.7.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.20.0\log4j-slf4j2-impl-2.20.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\logging\log4j\log4j-core\2.20.0\log4j-core-2.20.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\logging\log4j\log4j-1.2-api\2.20.0\log4j-1.2-api-2.20.0.jar;C:\Users\sergey.astakhov\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\curator\curator-recipes\2.13.0\curator-recipes-2.13.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\curator\curator-framework\2.13.0\curator-framework-2.13.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\curator\curator-client\2.13.0\curator-client-2.13.0.jar;C:\Users\sergey.astakhov\.m2\repository\com\google\guava\guava\16.0.1\guava-16.0.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\zookeeper\zookeeper\3.6.3\zookeeper-3.6.3.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.6.3\zookeeper-jute-3.6.3.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\yetus\audience-annotations\0.5.0\audience-annotations-0.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\jakarta\servlet\jakarta.servlet-api\4.0.3\jakarta.servlet-api-4.0.3.jar;C:\Users\sergey.astakhov\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\commons\commons-compress\1.23.0\commons-compress-1.23.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\commons\commons-text\1.10.0\commons-text-1.10.0.jar;C:\Users\sergey.astakhov\.m2\repository\commons-io\commons-io\2.13.0\commons-io-2.13.0.jar;C:\Users\sergey.astakhov\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\sergey.astakhov\.m2\repository\com\google\code\findbugs\jsr305\3.0.0\jsr305-3.0.0.jar;C:\Users\sergey.astakhov\.m2\repository\com\ning\compress-lzf\1.1.2\compress-lzf-1.1.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.3\snappy-java-1.1.10.3.jar;C:\Users\sergey.astakhov\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\sergey.astakhov\.m2\repository\com\github\luben\zstd-jni\1.5.5-4\zstd-jni-1.5.5-4.jar;C:\Users\sergey.astakhov\.m2\repository\org\roaringbitmap\RoaringBitmap\0.9.45\RoaringBitmap-0.9.45.jar;C:\Users\sergey.astakhov\.m2\repository\org\roaringbitmap\shims\0.9.45\shims-0.9.45.jar;C:\Users\sergey.astakhov\.m2\repository\org\scala-lang\modules\scala-xml_2.12\2.1.0\scala-xml_2.12-2.1.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\scala-lang\scala-library\2.12.18\scala-library-2.12.18.jar;C:\Users\sergey.astakhov\.m2\repository\org\scala-lang\scala-reflect\2.12.18\scala-reflect-2.12.18.jar;C:\Users\sergey.astakhov\.m2\repository\org\json4s\json4s-jackson_2.12\3.7.0-M11\json4s-jackson_2.12-3.7.0-M11.jar;C:\Users\sergey.astakhov\.m2\repository\org\json4s\json4s-core_2.12\3.7.0-M11\json4s-core_2.12-3.7.0-M11.jar;C:\Users\sergey.astakhov\.m2\repository\org\json4s\json4s-ast_2.12\3.7.0-M11\json4s-ast_2.12-3.7.0-M11.jar;C:\Users\sergey.astakhov\.m2\repository\org\json4s\json4s-scalap_2.12\3.7.0-M11\json4s-scalap_2.12-3.7.0-M11.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\jersey\core\jersey-client\2.40\jersey-client-2.40.jar;C:\Users\sergey.astakhov\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\2.1.6\jakarta.ws.rs-api-2.1.6.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\hk2\external\jakarta.inject\2.6.1\jakarta.inject-2.6.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\jersey\core\jersey-common\2.40\jersey-common-2.40.jar;C:\Users\sergey.astakhov\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\hk2\osgi-resource-locator\1.0.3\osgi-resource-locator-1.0.3.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\jersey\core\jersey-server\2.40\jersey-server-2.40.jar;C:\Users\sergey.astakhov\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet\2.40\jersey-container-servlet-2.40.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\jersey\containers\jersey-container-servlet-core\2.40\jersey-container-servlet-core-2.40.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\jersey\inject\jersey-hk2\2.40\jersey-hk2-2.40.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\hk2\hk2-locator\2.6.1\hk2-locator-2.6.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\hk2\external\aopalliance-repackaged\2.6.1\aopalliance-repackaged-2.6.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\hk2\hk2-api\2.6.1\hk2-api-2.6.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\glassfish\hk2\hk2-utils\2.6.1\hk2-utils-2.6.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\javassist\javassist\3.29.2-GA\javassist-3.29.2-GA.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-all\4.1.96.Final\netty-all-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-buffer\4.1.96.Final\netty-buffer-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-codec\4.1.96.Final\netty-codec-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-codec-http\4.1.96.Final\netty-codec-http-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-codec-http2\4.1.96.Final\netty-codec-http2-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-codec-socks\4.1.96.Final\netty-codec-socks-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-common\4.1.96.Final\netty-common-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-handler\4.1.96.Final\netty-handler-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.96.Final\netty-transport-native-unix-common-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-handler-proxy\4.1.96.Final\netty-handler-proxy-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-resolver\4.1.96.Final\netty-resolver-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport\4.1.96.Final\netty-transport-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.96.Final\netty-transport-classes-epoll-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-classes-kqueue\4.1.96.Final\netty-transport-classes-kqueue-4.1.96.Final.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-native-epoll\4.1.96.Final\netty-transport-native-epoll-4.1.96.Final-linux-x86_64.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-native-epoll\4.1.96.Final\netty-transport-native-epoll-4.1.96.Final-linux-aarch_64.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.96.Final\netty-transport-native-kqueue-4.1.96.Final-osx-aarch_64.jar;C:\Users\sergey.astakhov\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.96.Final\netty-transport-native-kqueue-4.1.96.Final-osx-x86_64.jar;C:\Users\sergey.astakhov\.m2\repository\com\clearspring\analytics\stream\2.9.6\stream-2.9.6.jar;C:\Users\sergey.astakhov\.m2\repository\io\dropwizard\metrics\metrics-core\4.2.19\metrics-core-4.2.19.jar;C:\Users\sergey.astakhov\.m2\repository\io\dropwizard\metrics\metrics-jvm\4.2.19\metrics-jvm-4.2.19.jar;C:\Users\sergey.astakhov\.m2\repository\io\dropwizard\metrics\metrics-json\4.2.19\metrics-json-4.2.19.jar;C:\Users\sergey.astakhov\.m2\repository\io\dropwizard\metrics\metrics-graphite\4.2.19\metrics-graphite-4.2.19.jar;C:\Users\sergey.astakhov\.m2\repository\io\dropwizard\metrics\metrics-jmx\4.2.19\metrics-jmx-4.2.19.jar;C:\Users\sergey.astakhov\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.2\jackson-databind-2.15.2.jar;C:\Users\sergey.astakhov\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.12\2.15.2\jackson-module-scala_2.12-2.15.2.jar;C:\Users\sergey.astakhov\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\ivy\ivy\2.5.1\ivy-2.5.1.jar;C:\Users\sergey.astakhov\.m2\repository\oro\oro\2.0.8\oro-2.0.8.jar;C:\Users\sergey.astakhov\.m2\repository\net\razorvine\pickle\1.3\pickle-1.3.jar;C:\Users\sergey.astakhov\.m2\repository\net\sf\py4j\py4j\0.10.9.7\py4j-0.10.9.7.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-tags_2.12\3.5.0\spark-tags_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\commons\commons-crypto\1.1.0\commons-crypto-1.1.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-sql_2.12\3.5.0\spark-sql_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\rocksdb\rocksdbjni\8.3.2\rocksdbjni-8.3.2.jar;C:\Users\sergey.astakhov\.m2\repository\com\univocity\univocity-parsers\2.9.1\univocity-parsers-2.9.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-sketch_2.12\3.5.0\spark-sketch_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-catalyst_2.12\3.5.0\spark-catalyst_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\spark\spark-sql-api_2.12\3.5.0\spark-sql-api_2.12-3.5.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.12\2.3.0\scala-parser-combinators_2.12-2.3.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\antlr\antlr4-runtime\4.9.3\antlr4-runtime-4.9.3.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\arrow\arrow-vector\12.0.1\arrow-vector-12.0.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\arrow\arrow-format\12.0.1\arrow-format-12.0.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\arrow\arrow-memory-core\12.0.1\arrow-memory-core-12.0.1.jar;C:\Users\sergey.astakhov\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.1\jackson-datatype-jsr310-2.15.1.jar;C:\Users\sergey.astakhov\.m2\repository\com\google\flatbuffers\flatbuffers-java\1.12.0\flatbuffers-java-1.12.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\arrow\arrow-memory-netty\12.0.1\arrow-memory-netty-12.0.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\codehaus\janino\janino\3.1.9\janino-3.1.9.jar;C:\Users\sergey.astakhov\.m2\repository\org\codehaus\janino\commons-compiler\3.1.9\commons-compiler-3.1.9.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\datasketches\datasketches-java\3.3.0\datasketches-java-3.3.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\datasketches\datasketches-memory\2.1.0\datasketches-memory-2.1.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\orc\orc-core\1.9.1\orc-core-1.9.1-shaded-protobuf.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\orc\orc-shims\1.9.1\orc-shims-1.9.1.jar;C:\Users\sergey.astakhov\.m2\repository\io\airlift\aircompressor\0.25\aircompressor-0.25.jar;C:\Users\sergey.astakhov\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\threeten\threeten-extra\1.7.1\threeten-extra-1.7.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\orc\orc-mapreduce\1.9.1\orc-mapreduce-1.9.1-shaded-protobuf.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\hive\hive-storage-api\2.8.1\hive-storage-api-2.8.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\parquet\parquet-column\1.13.1\parquet-column-1.13.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\parquet\parquet-common\1.13.1\parquet-common-1.13.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\parquet\parquet-encoding\1.13.1\parquet-encoding-1.13.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\parquet\parquet-hadoop\1.13.1\parquet-hadoop-1.13.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\parquet\parquet-format-structures\1.13.1\parquet-format-structures-1.13.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\apache\parquet\parquet-jackson\1.13.1\parquet-jackson-1.13.1.jar;C:\Users\sergey.astakhov\.m2\repository\org\slf4j\slf4j-api\2.0.0\slf4j-api-2.0.0.jar;C:\Users\sergey.astakhov\.m2\repository\org\slf4j\slf4j-simple\2.0.0\slf4j-simple-2.0.0.jar net.alchim31.maven.Main --add-exports java.base/sun.nio.ch=ALL-UNNAMED
+Spark init
+SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [org.apache.logging.slf4j.SLF4JServiceProvider@28eaa59a]
+SLF4J: Found provider [org.slf4j.simple.SimpleServiceProvider@3427b02d]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [org.apache.logging.slf4j.SLF4JServiceProvider@28eaa59a]
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+24/03/29 02:22:52 INFO SparkContext: Running Spark version 3.5.0
+24/03/29 02:22:52 INFO SparkContext: OS info Windows 11, 10.0, amd64
+24/03/29 02:22:52 INFO SparkContext: Java version 21
+24/03/29 02:22:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/03/29 02:22:52 INFO ResourceUtils: ==============================================================
+24/03/29 02:22:53 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/03/29 02:22:53 INFO ResourceUtils: ==============================================================
+24/03/29 02:22:53 INFO SparkContext: Submitted application: sparkbyexamples.com
+24/03/29 02:22:53 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/03/29 02:22:53 INFO ResourceProfile: Limiting resource is cpu
+24/03/29 02:22:53 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/03/29 02:22:53 INFO SecurityManager: Changing view acls to: sergey.astakhov
+24/03/29 02:22:53 INFO SecurityManager: Changing modify acls to: sergey.astakhov
+24/03/29 02:22:53 INFO SecurityManager: Changing view acls groups to: 
+24/03/29 02:22:53 INFO SecurityManager: Changing modify acls groups to: 
+24/03/29 02:22:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: sergey.astakhov; groups with view permissions: EMPTY; users with modify permissions: sergey.astakhov; groups with modify permissions: EMPTY
+24/03/29 02:22:53 INFO Utils: Successfully started service 'sparkDriver' on port 59037.
+24/03/29 02:22:53 INFO SparkEnv: Registering MapOutputTracker
+24/03/29 02:22:53 INFO SparkEnv: Registering BlockManagerMaster
+24/03/29 02:22:53 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/03/29 02:22:53 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/03/29 02:22:53 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/03/29 02:22:53 INFO DiskBlockManager: Created local directory at C:\Users\sergey.astakhov\AppData\Local\Temp\blockmgr-2e2c7803-aea6-4351-afee-6cbcce3aff22
+24/03/29 02:22:53 INFO MemoryStore: MemoryStore started with capacity 1002.0 MiB
+24/03/29 02:22:53 INFO SparkEnv: Registering OutputCommitCoordinator
+24/03/29 02:22:53 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/03/29 02:22:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/03/29 02:22:53 INFO Executor: Starting executor ID driver on host NB3448.mshome.net
+24/03/29 02:22:53 INFO Executor: OS info Windows 11, 10.0, amd64
+24/03/29 02:22:53 INFO Executor: Java version 21
+24/03/29 02:22:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/03/29 02:22:53 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4aa21f9d for default.
+24/03/29 02:22:54 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 59038.
+24/03/29 02:22:54 INFO NettyBlockTransferService: Server created on NB3448.mshome.net:59038
+24/03/29 02:22:54 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/03/29 02:22:54 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, NB3448.mshome.net, 59038, None)
+24/03/29 02:22:54 INFO BlockManagerMasterEndpoint: Registering block manager NB3448.mshome.net:59038 with 1002.0 MiB RAM, BlockManagerId(driver, NB3448.mshome.net, 59038, None)
+24/03/29 02:22:54 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, NB3448.mshome.net, 59038, None)
+24/03/29 02:22:54 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, NB3448.mshome.net, 59038, None)
+Spark post-init
+Working Directory = C:\Users\sergey.astakhov\Desktop\BMSTU-JAVA-BIGDATA\task10_x
+
+
+
+1. sample
++---+-----+--------------------+----+------------------------+----------------------------+---------------------------------------+--------+------------+---------------------------+------------------------------+------------------------+------------------+-------------------+------------------+------------+------------------+------------------+--------------------------+------------------------+--------------------------+----------------------------------------------------+------------------+--------------------+--------------------------+-------------------+-----------------+---------------------------+-----------------------+--------------------------------+---------------------+--------------------+-----------------------+-----------------------------+--------------------------------+-------------------------------+---------------------------------+------------------------------------+-------------------+------------------+------------------+-------------------+-------------------+-------------------+----------------------------+----------------------------+----------------------------+---------------------------+--------------------------+---------------------------+--------------------------+
+|_c0|Index|             Address|FLAG|Avg min between sent tnx|Avg min between received tnx|Time Diff between first and last (Mins)|Sent tnx|Received Tnx|Number of Created Contracts|Unique Received From Addresses|Unique Sent To Addresses|min value received|max value received |  avg val received|min val sent|      max val sent|      avg val sent|min value sent to contract|max val sent to contract|avg value sent to contract|total transactions (including tnx to create contract|  total Ether sent|total ether received|total ether sent contracts|total ether balance| Total ERC20 tnxs| ERC20 total Ether received| ERC20 total ether sent| ERC20 total Ether sent contract| ERC20 uniq sent addr| ERC20 uniq rec addr| ERC20 uniq sent addr.1| ERC20 uniq rec contract addr| ERC20 avg time between sent tnx| ERC20 avg time between rec tnx| ERC20 avg time between rec 2 tnx| ERC20 avg time between contract tnx|  ERC20 min val rec| ERC20 max val rec| ERC20 avg val rec| ERC20 min val sent| ERC20 max val sent| ERC20 avg val sent| ERC20 min val sent contract| ERC20 max val sent contract| ERC20 avg val sent contract| ERC20 uniq sent token name| ERC20 uniq rec token name| ERC20 most sent token type| ERC20_most_rec_token_type|
++---+-----+--------------------+----+------------------------+----------------------------+---------------------------------------+--------+------------+---------------------------+------------------------------+------------------------+------------------+-------------------+------------------+------------+------------------+------------------+--------------------------+------------------------+--------------------------+----------------------------------------------------+------------------+--------------------+--------------------------+-------------------+-----------------+---------------------------+-----------------------+--------------------------------+---------------------+--------------------+-----------------------+-----------------------------+--------------------------------+-------------------------------+---------------------------------+------------------------------------+-------------------+------------------+------------------+-------------------+-------------------+-------------------+----------------------------+----------------------------+----------------------------+---------------------------+--------------------------+---------------------------+--------------------------+
+|  0|    1|0x00009277775ac7d...|   0|                  844.26|                     1093.71|                              704785.63|     721|          89|                          0|                            40|                     118|               0.0|          45.806785|          6.589513|         0.0|             31.22|          1.200681|                       0.0|                     0.0|                       0.0|                                                 810|       865.6910932|         586.4666748|                       0.0|       -279.2244185|            265.0|                35588543.78|            35603169.52|                             0.0|                 30.0|                54.0|                    0.0|                         58.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|        15000000.0|       265586.1476|                0.0|        16830998.35|          271779.92|                         0.0|                         0.0|                         0.0|                       39.0|                      57.0|                  Cofoundit|                 Numeraire|
+|  1|    2|0x0002b44ddb1476d...|   0|                12709.07|                     2958.44|                             1218216.73|      94|           8|                          0|                             5|                      14|               0.0|           2.613269|          0.385685|         0.0|               1.8|          0.032844|                       0.0|                     0.0|                       0.0|                                                 102|        3.08729702|         3.085478209|                       0.0|       -0.001818811|              8.0|                403.4283054|            2.260809454|                             0.0|                  1.0|                 5.0|                    0.0|                          7.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|             365.0|         57.632615|           2.260809|           2.260809|           2.260809|                         0.0|                         0.0|                         0.0|                        1.0|                       7.0|             Livepeer Token|            Livepeer Token|
+|  2|    3|0x0002bda54cb772d...|   0|               246194.54|                     2434.02|                               516729.3|       2|          10|                          0|                            10|                       2|          0.113119|           1.165453|          0.358906|        0.05|          3.538616|1.7943080000000002|                       0.0|                     0.0|                       0.0|                                                  12|        3.58861565|          3.58905665|                       0.0|           0.000441|              8.0|                521.5120705|                    0.0|                             0.0|                  0.0|                 7.0|                    0.0|                          8.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|442.81984000000006|         65.189009|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       8.0|                       None|                     XENON|
+|  3|    4|0x00038e6ba2fd5c0...|   0|                 10219.6|                    15785.09|                               397555.9|      25|           9|                          0|                             7|                      13|               0.0|              500.0|          99.48884|         0.0|             450.0|         70.001834|                       0.0|                     0.0|                       0.0|                                                  34|1750.0458620000004|          895.399559|                       0.0| -854.6463028999998|             14.0|                17111.05191|            11412.23068|                             0.0|                  2.0|                11.0|                    0.0|                         11.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|       11412.23068|       1555.550174|              100.0|         9029.23068|        3804.076893|                         0.0|                         0.0|                         0.0|                        1.0|                      11.0|                     Raiden|                     XENON|
+|  4|    5|0x00062d1dd1afb6f...|   0|                   36.61|                    10707.77|                              382472.42|    4598|          20|                          1|                             7|                      19|               0.0|          12.802411|          2.671095|         0.0|               9.0|          0.022688|                       0.0|                     0.0|                       0.0|                                                4619|       104.3188828|          53.4218965|                       0.0|       -50.89698629|             42.0|                162829.6609|            123539.9329|                             0.0|                  4.0|                23.0|                    0.0|                         27.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|           90000.0|       4934.232147|                0.0|            45000.0|        13726.65922|                         0.0|                         0.0|                         0.0|                        6.0|                      27.0|              StatusNetwork|                       EOS|
+|  5|    6|0x000895ad78f4403...|   0|                 9900.12|                      375.48|                               20926.68|       2|           3|                          0|                             2|                       1|0.7241479999999999|           4.813776|3.2349080000000003|      4.1668|5.5369160000000015|          4.851858|                       0.0|                     0.0|                       0.0|                                                   5|        9.70371586|          9.70472386|                       0.0|           0.001008|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
+|  6|    7|0x000d63fc5df52b0...|   0|                   69.46|                      629.44|                                8660.35|      25|          11|                          0|                             9|                      20|             0.049|               2.65|          1.098115|    0.009457|          4.284785|          0.482496|                       0.0|                     0.0|                       0.0|                                                  36|        12.0623941|           12.079266|                       0.0|        0.016871896|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
+|  7|    8|0x000e001ab444fa8...|   0|                 1497.39|                      176.84|                              319828.05|     213|           5|                          0|                             3|                       3|           0.11849|                2.0|          0.891098|         0.0|               0.7|          0.040861|                       0.0|                     0.0|                       0.0|                                                 218|       8.703392156|          4.45548974|                       0.0|-4.2479024160000005|              7.0|                 397.951964|                    0.0|                             0.0|                  0.0|                 5.0|                    0.0|                          7.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|             365.0|         56.850281|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       7.0|                       None|                     XENON|
+|  8|    9|0x0012cb699c83604...|   0|                     0.0|                         0.0|                                 496.62|       1|           1|                          0|                             1|                       1|               2.0|                2.0|               2.0|     1.99938|           1.99938|           1.99938|                       0.0|                     0.0|                       0.0|                                                   2|           1.99938|                 2.0|                       0.0|            0.00062|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
+|  9|   10|0x0012f247c9f980e...|   0|                 2570.59|                     3336.01|                                30572.7|       8|           3|                          0|                             2|                       4|               0.1|               40.0|              16.7|         0.1|              40.0|         18.634625|                       0.0|                     0.0|                       0.0|                                                  11|           149.077|                50.1|                       0.0|            -98.977|              1.0|                      600.0|                    0.0|                             0.0|                  0.0|                 1.0|                    0.0|                          1.0|                             0.0|                            0.0|                              0.0|                                 0.0|              600.0|             600.0|             600.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       1.0|                       None|                  AICRYPTO|
+| 10|   11|0x0013e58a315d2e7...|   0|                   32.45|                    12921.57|                              129540.15|      10|          10|                          0|                             2|                       1|          1.000052|           1.014875|          1.004819|    0.999088|           1.01417|          1.004055|                       0.0|                     0.0|                       0.0|                                                  20|       10.04055439|         10.04819041|                       0.0|        0.007636018|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
+| 11|   12|0x0016338abcb6bfa...|   0|                 3716.41|                     1448.09|                              385961.98|       8|         246|                          0|                             4|                       3|          0.118061|  81.38600000000002|          3.381313|        0.01|             300.0|        103.974875|                       0.0|                     0.0|                       0.0|                                                 254|           831.799|   831.8030477000002|                       0.0|        0.004047714|              8.0|                6193.025913|                    0.0|                             0.0|                  0.0|                 7.0|                    0.0|                          8.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|       4035.631891|        774.128239|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       8.0|                       None|                     XENON|
+| 12|   13|0x001b28141562bc2...|   0|                     0.0|                    12431.27|                              198900.25|       0|          16|                          1|                             4|                       0|               0.0|           1.002069|          0.769166|         0.0|               0.0|               0.0|                       0.0|                     0.0|                       0.0|                                                  17|               0.0|         12.30665958|                       0.0|        12.30665958|              2.0|                0.181283664|                    0.0|                             0.0|                  0.0|                 2.0|                    0.0|                          2.0|                             0.0|                            0.0|                              0.0|                                 0.0|0.07536699999999999|          0.105917|          0.090642|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       2.0|                       None|                  DATAcoin|
+| 13|   14|0x001cb265c5606d7...|   0|                  9520.7|                     5776.32|                               78197.58|       7|           2|                          0|                             2|                       4|             0.095|0.26515900000000003|          0.180079|         0.0|          0.133441|          0.037563|                       0.0|                     0.0|                       0.0|                                                   9|       0.262941117|          0.36015854|                       0.0|        0.097217423|              3.0|                      8.001|                    0.0|                             0.0|                  0.0|                 2.0|                    0.0|                          2.0|                             0.0|                            0.0|                              0.0|                                 0.0|              0.001|               5.0|             2.667|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       2.0|                       None|                  PoSToken|
+| 14|   15|0x001cf9871aeaf2a...|   0|                14106.66|                     3742.82|                               540061.9|      32|          24|                          0|                            11|                      21|               0.0| 1499.9995800000004|         77.125266|         0.0|            1100.0|        102.312148|                       0.0|                     0.0|                       0.0|                                                  56|       3273.988723|  1851.0063760000005|                       0.0|       -1422.982347|             33.0|                139827.7923|               133086.5|                             0.0|                  4.0|                23.0|                    0.0|                         26.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|          118324.5|       4993.849726|              1e-06|           118324.5|            26617.3|                         0.0|                         0.0|                         0.0|                        4.0|                      26.0|                    TenXPay|              KyberNetwork|
+| 15|   16|0x001d54f72af6eae...|   0|                  757.91|                       11.08|                               25802.32|      34|           3|                          1|                             3|                      13|          0.091844|                1.0|          0.530615|         0.0|          0.933444|          0.044268|                       0.0|                     0.0|                       0.0|                                                  38|1.5051029580000002|         1.591844363|                       0.0|        0.086741405|              4.0|                        0.0|                  5e-06|                             0.0|                  3.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|              5e-06|              1e-06|                         0.0|                         0.0|                         0.0|                        1.0|                       0.0|                       NULL|                      None|
+| 16|   17|0x001e6fbcd020823...|   0|                    3.13|                     4923.24|                              280803.43|      57|          57|                          0|                             2|                       2|          0.016037|           0.277689|          0.204013|    0.015617|          0.277269|          0.203593|                       0.0|                     0.0|                       0.0|                                                 114|        11.6048114|          11.6287514|                       0.0|        0.023940002|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
+| 17|   18|0x001eb1e90d25e8c...|   0|                27681.45|                    11171.03|                              842599.05|      26|          11|                          0|                             6|                      15|              0.09|              34.94|         16.564688|         0.0|              34.9|          9.896423|                       0.0|                     0.0|                       0.0|                                                  37|           257.307|         182.2115661|                       0.0|       -75.09543387|             13.0|                308440.3104|            307097.3104|                             0.0|                  4.0|                 8.0|                    0.0|                          7.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|          274230.0|        34271.1456|             1620.0|           274231.0|         76774.3276|                         0.0|                         0.0|                         0.0|                        3.0|                       7.0|              StatusNetwork|                    Bancor|
+| 18|   19|0x001f357ca933075...|   0|                  770.29|                        3.82|                                 2318.5|       3|           2|                          0|                             1|                       3|             7.772|             19.995|           13.8835|         3.7|         20.082772|          9.255226|                       0.0|                     0.0|                       0.0|                                                   5|         27.765677|              27.767|                       0.0|           0.001323|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
+| 19|   20|0x001f99982965a37...|   0|                  163.78|                        1.11|                                 329.78|       2|           2|                          0|                             2|                       2|         44.048882|  56.95111800000001|              50.5|        0.61|        100.388974|         50.499487|                       0.0|                     0.0|                       0.0|                                                   4|       100.9989738|               101.0|                       0.0|        0.001026218|              0.0|                        0.0|                    0.0|                             0.0|                  0.0|                 0.0|                    0.0|                          0.0|                             0.0|                            0.0|                              0.0|                                 0.0|                0.0|               0.0|               0.0|                0.0|                0.0|                0.0|                         0.0|                         0.0|                         0.0|                        0.0|                       0.0|                          0|                         0|
++---+-----+--------------------+----+------------------------+----------------------------+---------------------------------------+--------+------------+---------------------------+------------------------------+------------------------+------------------+-------------------+------------------+------------+------------------+------------------+--------------------------+------------------------+--------------------------+----------------------------------------------------+------------------+--------------------+--------------------------+-------------------+-----------------+---------------------------+-----------------------+--------------------------------+---------------------+--------------------+-----------------------+-----------------------------+--------------------------------+-------------------------------+---------------------------------+------------------------------------+-------------------+------------------+------------------+-------------------+-------------------+-------------------+----------------------------+----------------------------+----------------------------+---------------------------+--------------------------+---------------------------+--------------------------+
+only showing top 20 rows
+
+
+
+
+2. created contracts top
++--------------------+---------------------------+----+
+|             Address|Number of Created Contracts|FLAG|
++--------------------+---------------------------+----+
+|0xb42b20ddbeabdc2...|                       9995|   0|
+|0x42da8a05cb7ed9a...|                       6453|   0|
+|0x48d466b7c0d32b6...|                       3900|   0|
+|0xb49091108e6804d...|                       3521|   0|
+|0x0536806df512d6c...|                       3128|   0|
+|0xab11204cfeaccff...|                       2550|   0|
+|0x1554aa0026292d0...|                       2404|   0|
+|0xa2a8f158aed54ce...|                       2096|   0|
+|0x497389bd412e70a...|                       1180|   0|
+|0x6d28515bf275298...|                         41|   0|
+|0x991e0dcb162dcc4...|                         19|   0|
+|0x8334a533f0c3f90...|                         16|   0|
+|0x36db23fd8e0fabb...|                          7|   1|
+|0x9e56625509c2f60...|                          6|   0|
+|0x0f7ce02f8af0405...|                          5|   0|
+|0xbc9b666f6aa9e5a...|                          5|   0|
+|0x0167409e6106ec3...|                          5|   1|
+|0x007cafba4edd0e2...|                          4|   0|
+|0x6f2dc326b31d512...|                          4|   0|
+|0x560833296ef7a7f...|                          4|   1|
++--------------------+---------------------------+----+
+only showing top 20 rows
+
+
+
+
+3. received-rate top
++--------------------+----------------------------+----+
+|             Address|Avg min between received tnx|FLAG|
++--------------------+----------------------------+----+
+|0x06c51cead292c09...|                        0.01|   0|
+|0x08f1a7010ec9872...|                        0.01|   0|
+|0x13cd6c860c74502...|                        0.01|   0|
+|0x14e581d63ab6c0d...|                        0.01|   0|
+|0x1651abb8e1e5d0f...|                        0.01|   0|
+|0x2397755bb8a1873...|                        0.01|   0|
+|0x248631b1e7e4cb0...|                        0.01|   0|
+|0x25b9c90ebd15ebc...|                        0.01|   0|
+|0x3ccdbd79d0a4d2d...|                        0.01|   0|
+|0x51ffad7c0454f8f...|                        0.01|   0|
+|0x63900050be39ba3...|                        0.01|   0|
+|0x85a661ba2704a6b...|                        0.01|   0|
+|0x85ef23bf9503300...|                        0.01|   0|
+|0x984ff9f9520a7ab...|                        0.01|   0|
+|0x071076ad315dbdc...|                        0.02|   0|
+|0x12f376654fb9169...|                        0.02|   0|
+|0xbc8d1b285478593...|                        0.02|   0|
+|0x58cdd82d39b6c65...|                        0.02|   0|
+|0x6316f4bd5bfe767...|                        0.02|   0|
+|0xc0df8637eb67500...|                        0.02|   0|
++--------------------+----------------------------+----+
+only showing top 20 rows
+
+
+
+
+4. rate for groups
++----+------------------+------------------+
+|FLAG|         sent_rate|     recieved_rate|
++----+------------------+------------------+
+|   0| 5427.797217436722| 9463.813842338806|
+|   1|3888.1097797154634|2874.7126388251477|
++----+------------------+------------------+
+
+
+
+
+5. most fraud-profitable tokens
++---------------------------+--------------------------+------------------+
+| ERC20 most sent token type| ERC20_most_rec_token_type| ERC20 max val rec|
++---------------------------+--------------------------+------------------+
+|                           |      Blockwell say NOT...|      1553031038.0|
+|       Blackmoon Crypto ...|                  KickCoin|       151272204.3|
+|                 Dao.Casino|                       RvT|        80000000.0|
+|                     Raiden|                   OmiseGO|        32888666.0|
+|                  POWERBANK|                 TemboCoin|        22000000.0|
+|                 Veritaseum|                  KickCoin|       21925498.71|
+|                   Populous|                    Snovio|        12879640.0|
+|                     Tronix|                    Tronix|        11600000.0|
+|                           |         USDDex Stablecoin|        10000000.0|
+|                    BitDice|                    Cashaa|         5000000.0|
+|               Litecoin One|              Litecoin One|         3500000.0|
+|                        PRG|                   OmiseGO|3342155.3860000004|
+|                       WaBi|               LendConnect|       3089827.293|
+|                 Brickblock|                  KickCoin|       1704864.397|
+|                   Populous|                   OmiseGO|         1670000.0|
+|                      OCoin|                   Amplify|         1010000.0|
+|                Lucky Token|                     Galbi|         1000000.0|
+|       blockwell.ai KYC ...|                    Helbiz|          950000.0|
+|                        BAT|             StatusNetwork|       714006.9167|
+|                      Storj|             StatusNetwork|       694980.5937|
++---------------------------+--------------------------+------------------+
+only showing top 20 rows
+
+
+
+
+6. most honest-profitable tokens
++---------------------------+--------------------------+------------------+
+| ERC20 most sent token type| ERC20_most_rec_token_type| ERC20 max val rec|
++---------------------------+--------------------------+------------------+
+|                      Ether|                  KickCoin|      1599270152.0|
+|        Dai Stablecoin v1.0|                       BAT|      1553054446.0|
+|                        MOT|            Livepeer Token|      1553054418.0|
+|              CultureVirtue|                  KickCoin|      1553054333.0|
+|                  SwarmCity|                 SwarmCity|      1553054321.0|
+|                    WePower|                  KickCoin|      1553054293.0|
+|                    Flyp.me|                   Flyp.me|      1553054158.0|
+|                        REP|                       REP|      1553054158.0|
+|       blockwell.ai KYC ...|                  DATAcoin|      1553054097.0|
+|                      Golem|                     Golem|      1553054037.0|
+|       blockwell.ai KYC ...|               Beauty Coin|      1553054037.0|
+|                       None|                     1irst|      1553054037.0|
+|                       None|          www.pnztrust.com|      1553031969.0|
+|                        EOS|                       EOS|      1553031969.0|
+|                  WaykiCoin|                   Enumivo|      1553031969.0|
+|                       None|      https://findthera...|      1553031895.0|
+|                       None|            Livepeer Token|      1553031895.0|
+|       blockwell.ai KYC ...|      https://findthera...|      1553031862.0|
+|                    Mavrodi|                   Mavrodi|      1553031862.0|
+|       blockwell.ai KYC ...|      https://findthera...|      1553031793.0|
++---------------------------+--------------------------+------------------+
+only showing top 20 rows
+
+
+
+
+7. most fraud-rated tokens
++---------------------------+--------------------------+--------+
+| ERC20 most sent token type| ERC20_most_rec_token_type|count(1)|
++---------------------------+--------------------------+--------+
+|                       NULL|                      NULL|     829|
+|                           |      Blockwell say NOT...|     767|
+|                           |                GSENetwork|      77|
+|                           |            Livepeer Token|      45|
+|                           |      blockwell.ai KYC ...|      38|
+|                           |                     ERC20|      33|
+|                           |      Free BOB Tokens -...|      32|
+|                           |                     XENON|      21|
+|       blockwell.ai KYC ...|                          |      20|
+|                           |                       VIU|      14|
+|                           |                      Lino|      11|
+|                     Tronix|                    Tronix|      11|
+|                           |                WinETHFree|      10|
+|                           |                 INS Promo|      10|
+|                           |               Yooba token|       9|
+|                           |                    Tronix|       8|
+|                           |                     OCoin|       8|
+|                           |                     CANDY|       7|
+|                           |       Bulleon Promo Token|       7|
+|       blockwell.ai KYC ...|      Blockwell say NOT...|       6|
++---------------------------+--------------------------+--------+
+only showing top 20 rows
+
+
+
+
+8. most honest-rated tokens
++---------------------------+--------------------------+--------+
+| ERC20 most sent token type| ERC20_most_rec_token_type|count(1)|
++---------------------------+--------------------------+--------+
+|                          0|                         0|    4399|
+|                       None|                   OmiseGO|     742|
+|                       None|                  DATAcoin|     326|
+|                       None|            Livepeer Token|     138|
+|                       None|                     XENON|      95|
+|                        EOS|                       EOS|      92|
+|                      Golem|                     Golem|      91|
+|                    OmiseGO|                   OmiseGO|      77|
+|                       None|                   Promodl|      39|
+|                       None|                    Tronix|      35|
+|                       None|       Bulleon Promo Token|      33|
+|                       None|                 INS Promo|      32|
+|                       None|                       VIU|      31|
+|                       None|          www.pnztrust.com|      29|
+|                       None|                 BOX Token|      29|
+|                       None|      blockwell.ai KYC ...|      25|
+|              StatusNetwork|             StatusNetwork|      25|
+|                       Qtum|                      Qtum|      24|
+|                       None|                  AICRYPTO|      22|
+|                        BAT|                       BAT|      22|
++---------------------------+--------------------------+--------+
+only showing top 20 rows
+
+
+
+
+9. avg val received top
++--------------------+----------------+----+
+|             Address|avg val received|FLAG|
++--------------------+----------------+----+
+|0x267be1c1d684f78...|     283618.8316|   0|
+|0x151e201b90f8790...|        12963.95|   0|
+|0x5167052b83f3695...|         10000.0|   1|
+|0x4de76b3dfd38292...|         10000.0|   1|
+|0x0b21fd643aaaf5a...|         10000.0|   1|
+|0x2d146aa23645950...|         10000.0|   1|
+|0x6a14e385fff2f21...|         10000.0|   1|
+|0xef0683bef79b7ad...|         10000.0|   1|
+|0xd624d046edbdef8...|     6333.265078|   1|
+|0xae91740e90d0c67...|     6333.016626|   0|
+|0x3c286cfb30146e5...|          5101.6|   0|
+|0x422e396e941ebd2...|          5000.5|   0|
+|0x446db2f7896d13d...|          5000.5|   0|
+|0x45c5836edcc5c42...|          5000.5|   0|
+|0x16402006acad644...|          5000.5|   0|
+|0xa47ef476c1b4942...|          5000.5|   0|
+|0xcbeabeff1f18c6f...|          5000.5|   0|
+|0x7932e1ed8586fff...|          5000.0|   0|
+|0x474aa9c6f46dc63...|     4999.999685|   1|
+|0x18345118bd04c40...|       3750.0015|   1|
++--------------------+----------------+----+
+only showing top 20 rows
+
+
+
+
+10. avg val received bottom
++--------------------+--------------------+----+
+|             Address|    avg val received|FLAG|
++--------------------+--------------------+----+
+|0x5ef5309d2864bb2...|             1.2e-05|   0|
+|0x1da022710df5002...|             2.4e-05|   0|
+|0x1a95b271b0535d1...|             2.2e-05|   0|
+|0x3750d8ef9d9c58a...|               4e-05|   0|
+|0x9609a82d20182d9...|               5e-05|   0|
+|0x9e12d932c429107...|               5e-05|   1|
+|0x08711d3b02c8758...|             6.2e-05|   0|
+|0x5ffc014343cd971...|             6.9e-05|   0|
+|0xcbcc0f036ed4788...|               7e-05|   0|
+|0x48c80f1f4d53d59...|               8e-05|   0|
+|0xaf48cfd4eee2b9f...|            0.000105|   1|
+|0xaef38fbfbf932d1...|             0.00015|   0|
+|0x314159265dd8dbb...|            0.000152|   0|
+|0xaaaf91d9b90df80...|0.000158000000000...|   0|
+|0xb734c74ff408749...|            0.000196|   0|
+|0xf91446ead6aadd4...|              0.0002|   1|
+|0x1a986f1659e11e2...|            0.000233|   0|
+|0x4427ee02ffa0bfa...|            0.000242|   1|
+|0xdd1db171b110fb8...|              0.0004|   1|
+|0x3b53ac518414c51...|             0.00048|   0|
++--------------------+--------------------+----+
+only showing top 20 rows
+
+
+Process finished with exit code 0

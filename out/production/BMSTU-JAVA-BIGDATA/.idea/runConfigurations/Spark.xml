@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spark" type="Application" factoryName="Application" singleton="false">
+    <option name="ALTERNATIVE_JRE_PATH" value="openjdk-21" />
+    <envs>
+      <env name="HADOOP_HOME" value="$PROJECT_DIR$/../../../../../hadooplocal" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="net.alchim31.maven.Main" />
+    <module name="scala-archetype-simple" />
+    <option name="PROGRAM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+    <option name="VM_PARAMETERS" value="--add-exports java.base/sun.nio.ch=ALL-UNNAMED" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
